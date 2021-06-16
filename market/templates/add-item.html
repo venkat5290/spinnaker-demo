@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+ add new item
+{% endblock %}
+
+{% block content %}
+<div class="text-center">
+  <div class="container">
+   <h2>New Faculty Details Form</h2>
+   <p class="lead">
+    Enter the new faculty details of the school
+   </p>
+  </div>
+    <br/>
+    <br/>
+    <div class="container">
+      <form method="POST" class="form-register" style="color:white">
+          {{ form.hidden_tag() }}
+          <h1 class="h3 mb-3 font-weight-normal">
+                Enter New Faculty Details
+          </h1>
+          <br>
+          {{ form.name.label() }}
+          {{ form.name(class="form-control", placeholder="Full Name") }}
+
+          {{ form.email_address.label() }}
+          {{ form.email_address(class="form-control", placeholder="Email Address") }}
+
+          {{ form.designation.label() }}
+          {{ form.designation(class="form-control", placeholder="Enter Designation") }}
+
+          <br>
+
+          {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+      </form>
+
+    </div>
+</div>
+{% endblock %}
