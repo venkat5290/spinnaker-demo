@@ -2,5 +2,5 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/spinnaker-demo', '.']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/spnnaker-demo']
+  args: ['push', 'gcr.io/$PROJECT_ID/spinnaker-demo']
 images: ['gcr.io/$PROJECT_ID/spinnaker-demo']
